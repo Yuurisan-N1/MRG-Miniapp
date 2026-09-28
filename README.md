@@ -35,7 +35,7 @@
 
 ## Requirements
 
-- Python `3.12+` (only needed to run the downloader script)
+- Ruby `3.0+` (only needed to run the downloader script)
 
 ---
 
@@ -51,13 +51,13 @@ cd MRG-Miniapp
 **Install downloader dependencies:**
 
 ```bash
-pip install requests colorama yuurisan
+gem install yuurisan
 ```
 
 **Download the binary for your platform:**
 
 ```bash
-python bot.py
+ruby bot.rb
 ```
 
 The script shows a numbered menu:
@@ -184,14 +184,14 @@ MRG-Miniapp/
 ├── MRG.exe              # Windows binary
 ├── MRG-linux-amd64      # Linux x86_64 binary
 ├── MRG-linux-arm64      # Linux ARM64 binary
-├── bot.py               # Interactive downloader script
+├── bot.rb               # Interactive downloader script
 ├── config.json          # Sleep duration, feature toggles including KYC
 ├── data.txt             # Account initData and optional wallet, one per line
 ├── proxy.txt            # Proxy list, one per line (optional)
 ├── device.json          # Per-account device profile cache (auto-generated)
 ├── LICENSE              # License file
 └── utils/
-    └── banner.py        # Banner using yuurisan module
+    └── banner.rb        # Banner using yuurisan module
 ```
 
 ---
