@@ -97,7 +97,7 @@ Fill `data.txt` with one entry per line. Each line can be just `initData`, or `i
 
 ```
 user=%7B%22id%22...&hash=abc123
-user=%7B%22id%22...&hash=def456|UQAbc...yourwalletaddress
+user=%7B%22id%22...&hash=def456|example...yourpharasewallet
 ```
 
 A wallet address is required for mining to be enabled. If no wallet is linked and none is provided, mining is skipped for that account. The `tgWebAppData=` prefix is stripped automatically if present.
