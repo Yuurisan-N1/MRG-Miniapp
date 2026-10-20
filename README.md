@@ -12,8 +12,8 @@
 </p>
 
 <p>
-  <b>MRG Miner Bot</b> is a full automation bot for the MRG Miner Telegram Miniapp.<br/>
-  It handles the complete cycle: linking a TON wallet if not yet connected, claiming the mining reward and attempting to unlock the next miner level, completing all pending tasks, claiming referral commissions, and optionally submitting KYC for unverified accounts, all running automatically across multiple accounts with per-account device profile caching, proxy support, and a live countdown between cycles.<br/>
+  <b>MRG Bot</b> is a full automation bot for the MRG Miner Telegram Miniapp.<br/>
+  It handles the complete cycle: verifying every session, linking the wallet the server expects, claiming the accumulated mining reward, collecting the one time bonus, claiming every task that is still open, and pulling the referral commission, all running automatically across multiple accounts with proxy support and a fixed wait between cycles.<br/>
   Built and distributed by <b>Yuurisandesu</b>.
 </p>
 
@@ -153,9 +153,6 @@ If a wallet address is provided in `data.txt` and the account does not already h
 
 ### Auto Mining
 The bot claims the pending MRG mining reward and logs the amount credited. After claiming, it attempts to unlock the next miner level. If the current balance is not enough to afford the next level, it is skipped and logged.
-
-### Auto KYC
-If `kyc` is enabled in config and the account has not yet passed KYC verification, the bot submits a KYC scan automatically. Accounts already verified or pending admin approval are skipped. If the submission is rejected, the bot retries with alternative approaches before giving up. The feature can be disabled entirely by setting `kyc` to `false` in config.
 
 ### Auto Tasks
 The bot fetches all tasks and compares them against the account's already-completed task IDs. For each pending task, it submits a claim request and logs the MRG reward. Tasks rejected by the server or rate-limited are logged individually and the next task is tried.
